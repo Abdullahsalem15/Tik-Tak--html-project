@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Self-Assessment and Growth Tools</title>
+    <style>
+    
+   
+        table {
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+
+ tr,th, td {
+    border: 5px solid black;
+   
+    text-align: left;
+}
+h3,h4{
+  color: darkred;
+}
+
+     
+    </style>
+  </head>
+  <body>
+   <div class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm mb-4">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link px-3" href="Home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="About.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="learning hub.html">Learning Hub</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="self-assessment.html">Self-Assessment</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="Success Stories.html">Success Stories</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="Workshops & Events.html">Workshops & Events</a></li>
+          <li class="nav-item"><a class="nav-link px-3 " href="Contact Us.html">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link px-3 " href="Self Check.html">Self Check</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <h1 class="header">Time is your most valuable resource — use small steps
+      daily to grow your
+      skills.</h1>
+
+    <p style="color: darkred;">Contents:</p>
+    <ul>
+      <li><a href="#skill">Skill Survey</a></li>
+      <li><a href="#goals">Set a Small Goal</a></li>
+      <li><a href="#examples">Examples & Sample Answers</a></li>
+    </ul>
+    <br><hr>
+
+    <h3>How to use this page</h3>
+    <p>Read the examples, try the short surveys, and pick one small action to
+      practice this week. Keep it quick and repeatable.</p>
+
+    <h3 id="skill">Skill Survey</h3>
+    <p>Choose your level and try a suggested action:</p>
+
+    
+    
+
+<h3>Time Management</h3>
+<table class="time-table">
+  <tr>
+    <th>Level</th>
+    <th>Suggested Action</th>
+  </tr>
+  <tr>
+    <td><label><input type="radio" name="time" value="beginner" > Beginner</label></td>
+    <td>Try Pomodoro.</td>
+  </tr>
+  <tr>
+    <td><label><input type="radio" name="time" value="intermediate"> Intermediate</label></td>
+    <td>Plan 3 tasks daily.</td>
+  </tr>
+  <tr>
+    <td><label><input type="radio" name="time" value="advanced"> Advanced</label></td>
+    <td>Remove low-value tasks.</td>
+  </tr>
+</table>
+<p><span id="span1" style="color: red;"></span></p>
+    <hr>
+
+    <h3 id="goals">Set a Small task</h3>
+    <p>Write one clear task and list 2–3 small steps:</p>
+    <input style="width: 500px; height: 50px;  font-size: large;" type="text"
+      placeholder="Example: Build portfolio homepage in 2 weeks" id="task1">
+      <p><span id="span2" style="color: red;"></span></p>
+    <label><input type="checkbox" name="checkb" value="first"> Step 1: Set a deadline for the task.</label><br>
+    <label><input type="checkbox" name="checkb" value=",second"> Step 2: use one of the time management's techniques (which you learned in learning hub).</label><br>
+    <label><input type="checkbox" name="checkb" value=",third"> Step 3: Rate your self.</label><br>
+    <p><span id="span3" style="color: red;"></span></p>
+    <button  onclick="click2()">Mark Progress</button>
+    <br>
+    <p><hr>
+
+    <h3 id="examples">Examples & Sample Answers</h3>
+    <p><strong>Example Question:</strong>
+      "How comfortable are you while studying?"<br>
+      <strong>Sample answer:</strong> "I feel somewhat distracted."<br>
+      <strong>Next small step:</strong> "Keep your phone far while studing."</p>
+    <br><hr>
+
+    <h4>SMART Goal (example)</h4>
+    <table>
+      <tr>
+        <td>
+          <strong>Goal:</strong> Finish a huge task in 2 weeks.<br>
+          <strong>Specific:</strong> Create 3 projects.<br>
+          <strong>Measurable:</strong> complete the task within the deadline and with full focus.<br>
+        </td>
+        <td>
+          <strong>Steps:</strong>
+          <ul>
+            <li>Day 1-3: Sketch</li>
+            <li>Day 3-10: Build</li>
+            <li>Day 10-14: Review & deploy</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+    <br><hr>
+
+    <h4>Quick Tips</h4>
+    <ul>
+      <li>Pick one small goal weekly.</li>
+      <li>Practice daily.</li>
+      <li>Ask for feedback.</li>
+    </ul>
+    <br><hr>
+    <p>Return to <a href="#top">top</a></p>
+  </div>
+<script>
+  function click2(){
+        var radio_time=document.getElementsByName("time");
+        var task=document.getElementById("task1").value;
+        var ch=document.getElementsByName("checkb");
+        var che='';
+var radio_one="";
+    for(i=0;i<radio_time.length;i++){
+      
+      if(radio_time[i].checked){
+radio_one=radio_time[i].value;
+        break;
+      }
+    }
+    if(radio_one==""){
+        document.getElementById("span1").innerHTML="please choose one";
+      }
+      for(i=0;i<ch.length;i++){
+        if(ch[i].checked){
+          che +=ch[i].value;
+        }
+      }
+      if(che==''){
+         document.getElementById("span3").innerHTML="please choose one";
+      }
+      if(task==''){
+         document.getElementById("span2").innerHTML="please choose one";
+
+      }
+      if(task!='' && che!='' && radio_one!=''){
+        alert("your level is :"+radio_one+"\n"+"yor task is :"+task+"\n"+"you complete the "+che+" step , keep going !!");
+        document.getElementById("span1").innerHTML='';
+                document.getElementById("span2").innerHTML='';
+        document.getElementById("span3").innerHTML='';
+
+      }
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  </body>
+</html>

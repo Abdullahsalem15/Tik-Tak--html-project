@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    h2, h3 {
+            color: darkred;
+        }
+  </style>
+</head>
+<body>
+   <div class="container-fluid">
+ 
+
+        
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm mb-4">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link px-3" href="Home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="About.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="learning hub.html">Learning Hub</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="self-assessment.html">Self-Assessment</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="Success Stories.html">Success Stories</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="Workshops & Events.html">Workshops & Events</a></li>
+          <li class="nav-item"><a class="nav-link px-3 " href="Contact Us.html">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link px-3 " href="Self Check.html">Self Check</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+   
+  <h1 class="header">Questions, feedback, or collaboration requests — use this simple form or the contact details to reach us.</h1>
+    
+ <form >
+     <fieldset>
+     <legend>Your feedback</legend>
+            
+    Full Name :
+     <input type="text" name="name" placeholder="Your full name" id="name1" > 
+     <span id="span1" style="color: red; font-size: small;"></span>  
+<br>  <br>      
+      Email :
+         <input type="email"  name="email1" id="email1"  placeholder="you@example.com">
+              <span id="span2" style="color: red; font-size: small;"></span>  
+         <br>
+         confirm Email :
+        <input type="email"  name="email2" id="email2" placeholder="you@example.com" >
+             <span id="span3" style="color: red; font-size: small;"></span> 
+    
+          <br><br>
+              Message :
+              <textarea name="message"  rows="5" cols="20" id="area"></textarea>
+                 <span id="span5" style="color: red; font-size: small;"></span>  
+<br><br>
+        </fieldset>
+          </form>
+<input type="button" value="submit" onclick="check()" style="font-size: 20px;">
+<hr>
+            <h2>Contact Details :</h2>
+            <p>Email: <a href="mailto:bahaaten@gmail.com">tiktak@gamil.com</a></p>
+            <br>
+            
+            <p >Phone: <span style="text-decoration: underline;">0795464613</span></p>
+            <br>
+            <p >Office hours: Sun–Thu, 9:00–16:00</p>
+         
+<p>Return to <a href="#top" >top</a></p>
+</div>
+<script>
+function check(){
+  
+  var valid=true;
+  var fullN=document.getElementById("name1").value;
+ var firstE= document.getElementById("email1").value;
+ var secondE=document.getElementById("email2").value;
+ var txt=document.getElementById("area").value;
+ 
+  if(fullN ===''){
+  document.getElementById("span1").innerHTML="please write your full name";
+  valid=false;
+ }
+ if(firstE ===""){
+    document.getElementById("span2").innerHTML="please write your email ";
+  valid=false;
+ }
+ if(secondE ==='' || secondE!=firstE){
+    document.getElementById("span3").innerHTML="please write the same email again";
+  valid=false;
+ }
+if(txt ===''){
+    document.getElementById("span5").innerHTML="please write your feedback";
+  valid=false;
+}
+while(valid){
+  alert(fullN+", your masasage has been received , we will contact with you on your email : "+firstE+" stay informed");
+  valid=false;
+}
+
+}
+
+
+
+
+</script>
+        
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+ 
+</body>
+</html>
